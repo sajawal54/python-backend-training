@@ -103,3 +103,41 @@ print(python_students | django_students)
 print(python_students & django_students)
 print(python_students - django_students)
 print(django_students - python_students)
+
+
+
+# DICTIONARY  allow us to store data as key value pair ;like objects in databases
+
+form = {
+  "name": "Sajawal",
+  "age": 21,
+  "city": "Manga Mandi Lahore"
+}
+
+print(form["name"])
+# to get none if result dont match insteadof error
+print(form.get("email"))
+
+# adding new data
+form["email"] = "abc@gmail.com"
+
+print(form)
+
+
+
+for key in form:
+  print(key)
+
+  for value in form.values():
+    print(value)
+
+
+    student = {
+    "name": "Sajawal",
+    "age": 21,
+    "course": "Python Backend",
+    "city": "Lahore"
+}
+
+for key, value in student.items():
+    print(f"{key}: {value}")
