@@ -50,3 +50,56 @@ print(name)
 print(age)
 print(degree)
 print(course)
+
+
+
+# SETS represented by {} and automatically remove duplicate value
+
+students = {"Sajawal" , "Jameel" , "Rajpoot" , "Sajawal" , "Jameel"}
+print(students)
+
+
+students.add("Khan")
+print(students)
+
+students.remove("Khan")
+print(students)
+
+# union in sets
+
+present_students = {"Sajawal" , "Rajpoot" , "Jameel"}
+absent_students = {"Ali", "Rajpoot", "Aqib"}
+
+print(present_students | absent_students)
+
+# intersection in sets
+
+print(present_students & absent_students)
+
+# difference in sets
+print(present_students - absent_students)
+
+students = {"ALI" , "Ahmad" , "Mehar"}
+for student in students:
+  print(students)
+
+
+
+numbers = [1, 2, 3, 2, 4, 5, 1, 6, 5]
+
+unique_numbers = set(numbers)
+
+print(unique_numbers)
+
+
+
+
+
+python_students = {"Ali", "Ahmed", "Usman"}
+
+django_students = {"Ahmed", "Usman", "Sajawal"}
+
+print(python_students | django_students)
+print(python_students & django_students)
+print(python_students - django_students)
+print(django_students - python_students)
