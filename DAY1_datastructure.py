@@ -28,3 +28,25 @@ for student in students:
   if "Rana" in student:
     print("Student Found")
     print(len(students))
+
+
+
+# TUPLES
+
+fruits = ("APPLE" , "BANANA" , "MANGO" , "ORANGE" , "GRAPES")
+print(fruits[0])
+print(fruits[4])
+
+for fruit in fruits:
+  print(fruit)
+
+
+# unpacking a tuple
+student = ("Sajawal" , 19 , "BSCS" , "Python_Backened")
+
+name , age , degree , course = student
+
+print(name)
+print(age)
+print(degree)
+print(course)
