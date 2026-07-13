@@ -10,7 +10,7 @@
 
 
 
-# Arithmetic Operators
+#1. Arithmetic Operators  make calculations
 # Addition
 # price = 500
 # delivery_fee = 100
@@ -61,3 +61,50 @@ print(f"Division = {num1 / num2}")
 print(f"Floor Division = {num1 // num2}")
 print(f"Modulo = {num1 % num2}")
 print(f"Exponent = {num1 ** num2}")
+
+
+
+
+# 2.  Comparison Operators makes decisions
+
+
+# == operator
+username = "SAJAWAL"
+
+print(username == "SAJAWAl")
+
+# != operator
+
+country = "Pakistan"
+print(country != "India")
+
+
+# > operator and < operator
+
+age = 19
+if age > 18:
+             print("Adult")
+else:
+        print("Not Adult")
+
+Age = 17
+if Age < 18:
+             print("Not Adult")
+else:
+        print("Adult")
+      
+
+# WHOLE EXAMPLE
+
+age = 21
+
+print(age == 21)
+print(age != 18)
+print(age > 18)
+print(age < 30)
+print(age >= 24)
+print(age <= 25)
+
+name = "Sajawal"
+print(name == "Sajawal")
+print(name != "Sajawal")
