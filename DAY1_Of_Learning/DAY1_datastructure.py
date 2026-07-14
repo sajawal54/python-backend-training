@@ -81,7 +81,7 @@ print(present_students - absent_students)
 
 students = {"ALI" , "Ahmad" , "Mehar"}
 for student in students:
-  print(students)
+  print(student)
 
 
 
