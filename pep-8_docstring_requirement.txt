@@ -1,0 +1,81 @@
+111111111111111111111111111111111111111111111111111111111111111111111111
+PEP-8 is a Python official style guide
+what it say is write pythone code in one consistent style
+
+Rule 1:
+
+Variables and Functions -> snake case
+the variables naming should be clear 
+StudentName -> wrong
+student_name -> right
+def Calculategrade() -> wrong
+def calculate_grade -> right
+
+Rule 2:
+
+Classes -> pascal case
+class Student -> right
+class student -> wrong
+class GradeChecker -> right
+class gradechecker -> wrong
+
+Rule 3:
+
+Constants -> UPPER_CASE
+    PI = 3.14
+MAX_USERS = 23 -> right
+
+Rule 4:
+
+Space Around Operators 
+
+a = 10 -> right
+a=10 -> wrong
+
+
+Rule 5:
+
+Always Import at the top
+
+Rule 6:
+Meaningfull variables names 
+instead of a or b use student_name or something else but Meaningfull
+
+Rule 7:
+Add comments for every thing so that others can understand your code well
+
+
+22222222222222222222222222222222222222222222222222222222222222222222222
+
+Docstrings document a class , function or module
+
+
+def add(a , b):
+  """
+   Return the sum of two numbers
+  """
+
+  return a+b
+
+
+print(add(10 , 20))
+to see the documentation
+print(add.__doc__)
+
+
+
+3333333333333333333333333333333333333333333333333333333
+
+Requirement.txt
+
+when we install pakages like 
+pip install django and all 
+we save them like
+pip freeze > requirement.txt
+
+
+this will create a file like 
+Django == 5.2.1
+
+now other developer can install everuthing with 
+pip install -r requirement.txt
