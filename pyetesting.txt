@@ -1,0 +1,18 @@
+pytest is simply a tool that runs your tests automatically
+
+
+assertion means i expect this answer to be like assert add(5 , 10) == 15 means i am expecting that the answer will be 15 acrofding to the function 
+
+edge cases  is an input that is unusual extreme  or likely reveal bugs 
+
+
+so basically a tesing code is difficult one by one by printing we just have nd to intall oytest and separete test files and they will automatically detect or test the code if yes then pass if no then fail 
+
+
+
+organizing test the tests should remain in separate test folder not in main py fils
+
+
+debugging is if we write a function def add and we want to knoiw what is the problem then we have 2 methods one is print means if a + b then print(a , b ) to check the errors and second way is breakpoints means the red dot left to the line number if we click it and press f5 the program pauses  and we can inspect the cde  one by one 
+
+stack trace suppose we hit an errroo then we will read therror from bottom to the top 
