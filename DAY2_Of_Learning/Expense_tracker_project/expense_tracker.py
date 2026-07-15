@@ -3,7 +3,7 @@ from pathlib import Path
 
 file_path = Path(__file__).parent / "expenses.csv"
 
-
+# menu showing
 def show_menu():
     print("\n===== Expense Tracker =====")
     print("1. Add Expense")
