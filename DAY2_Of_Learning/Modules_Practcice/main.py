@@ -1,4 +1,4 @@
-# # import math operation files this called module when we use another file as a import in file it becomes module and modules can be reuse 
+# # import math operation files this is called module when we use another file as a import in file it becomes module and modules can be reuse 
 # import math_operations
 # result = math_operations.add(5 , 9)
 # print(result)
