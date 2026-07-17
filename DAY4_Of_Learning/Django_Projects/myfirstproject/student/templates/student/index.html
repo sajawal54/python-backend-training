@@ -1,48 +1,107 @@
+{% extends "base.html" %}
 {% load static %}
 
-<!DOCTYPE html>
-<html lang="en">
+{% block title %}
+Student Portal
+{% endblock %}
 
-<head>
+{% block content %}
 
-    <meta charset="UTF-8">
+{% if messages %}
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% for message in messages %}
 
-    <title>Student Portal</title>
+        <div id="message" style="
+            background:#d4edda;
+            color:#155724;
+            padding:15px;
+            margin:15px;
+            border-radius:8px;
+            transition:0.5s;
+        ">
+            {{ message }}
+        </div>
 
-    <link rel="stylesheet" href="/static/student/style.css">
+    {% endfor %}
 
-</head>
+{% endif %}
 
-<body>
+<a href="/add-student/">
+    <button>Add Student</button>
+</a>
 
-<div class="container">
+<h1>Student List</h1>
 
-    <h1>🎓 Student Portal</h1>
+<table border="6" cellpadding="20">
 
-    <p class="subtitle">
-        Welcome to my second Django project.
-    </p>
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>Email</th>
+    </tr>
 
-    <div class="card">
+    {% if page_obj %}
 
-        <h2>Student Information</h2>
+        {% for student in page_obj %}
 
-        <p><strong>Name:</strong> Sajawal</p>
+        <tr>
+            <td>{{ student.name }}</td>
+            <td>{{ student.age }}</td>
+            <td>{{ student.email }}</td>
+        </tr>
 
-        <p><strong>University:</strong> Green International University</p>
+        {% endfor %}
 
-        <p><strong>Program:</strong> BS Computer Science</p>
+    {% else %}
 
-        <p><strong>Current Goal:</strong> Become a Backend Developer</p>
+        <tr>
+            <td colspan="3">No Students Found</td>
+        </tr>
 
-        <button>View Profile</button>
+    {% endif %}
 
-    </div>
+</table>
+
+<br>
+
+<div>
+
+    {% if page_obj.has_previous %}
+        <a href="?page={{ page_obj.previous_page_number }}">⬅ Previous</a>
+    {% endif %}
+
+    &nbsp;
+
+    Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+
+    &nbsp;
+
+    {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}">Next ➡</a>
+    {% endif %}
 
 </div>
 
-</body>
+<script>
 
-</html>
+setTimeout(function(){
+
+    let message = document.getElementById("message");
+
+    if(message){
+
+        message.style.opacity = "0";
+
+        setTimeout(function(){
+
+            message.remove();
+
+        },500);
+
+    }
+
+},5000);
+
+</script>
+
+{% endblock %}
