@@ -1,5 +1,7 @@
 from django.db import models
 
+
+# making student model for adding student data
 class Student(models.Model):
   name = models.CharField(max_length=100)
   age = models.IntegerField()
