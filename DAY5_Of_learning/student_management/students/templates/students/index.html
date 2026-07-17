@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <!-- for showing messages  -->
     {% if messages %}
 
     {% for message in messages %}
@@ -27,7 +28,7 @@
 
 {% endif %}
     <h1>Student List</h1>
-
+<!-- Go to add student page to add students  -->
 <a href="/students/add-students">
     <button>Add Student</button>
 </a>
@@ -46,7 +47,7 @@
         <td>{{ student.age }}</td>
         <td>{{ student.email }}</td>
 <td>
-
+<!-- Edit and dlete buttons -->
     <a href="{% url 'edit_student' student.id %}">
         Edit
     </a>
